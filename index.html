@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d'Offres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simulateur d'Offres</h1>
+    <form id="simulateur-form">
+        <h2>Offre Principale</h2>
+        <label for="offre-type">Type d'offre :</label>
+        <select id="offre-type">
+            <option value="adsl">ADSL</option>
+            <option value="fibre">Fibre</option>
+        </select>
+        <label for="engagement">Engagement :</label>
+        <select id="engagement">
+            <option value="12">12 mois</option>
+            <option value="24">24 mois</option>
+        </select>
+        <h2>Lignes Mobiles</h2>
+        <label for="lignes">Nombre de lignes mobiles :</label>
+        <input type="number" id="lignes" min="0" />
+        <h2>Options</h2>
+        <input type="checkbox" id="jeune-createur" />
+        <label for="jeune-createur">Jeune Créateur</label><br />
+        <input type="checkbox" id="adsl-fibre" />
+        <label for="adsl-fibre">Passage ADSL → Fibre</label><br />
+        <label for="marge">Marge de manœuvre :</label>
+        <select id="marge">
+            <option value="0">Aucune</option>
+            <option value="4">4 €</option>
+            <option value="10">10 €</option>
+            <option value="12">12 €</option>
+        </select>
+        <button type="submit">Calculer</button>
+    </form>
+    <div id="resultats"></div>
+    <script src="renderer.js"></script>
+</body>
+</html>
